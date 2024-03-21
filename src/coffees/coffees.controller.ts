@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  Logger,
   Param,
   Patch,
   Post,
@@ -28,6 +29,7 @@ export class CoffeesController {
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() body) {
+    Logger.debug(body);
     return `This action updates #${id} coffee`;
   }
 
